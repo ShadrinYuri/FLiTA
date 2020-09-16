@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+typedef struct stack {
+    int val;
+    struct stack *next;
+} stack_node;
+
+
+void push_stack(stack_node **top, int val)
+{
+    stack_node *newTop = malloc(sizeof(stack_node));
+    newTop->next = *top;
+    newTop->val = val;
+    *top = newTop;
+}
+
+int pop_stack(stack_node **top)
+{
+    if (*top == NULL)
+        exit(0);
+    stack_node *tmp ;
+    int val;
+    tmp = *top;
+    *top = (*top)->next;
+    val = tmp->val;
+    free(tmp);
+    return val;
+}
+
+void print_stack(stack_node *top)
+{
+  while(top != NULL)
+  {
+    printf("%d\n", top->val);
+    top = top->next;
+  }
+}
+
+
+int main() {
+    int n;
+    printf("write number of stack ");
+    scanf("%d", &n);
+
+    stack_node *top = NULL;
+
+    for(int i = 0; i < n; ++i)
+    {
+        int val;
+        scanf("%d", &val);
+        push_stack(&top, val);
+    }
+    printf("print of stack\n");
+    print_stack(top);
+    while (top != NULL)
+    {
+        printf("func pop: %d\n", pop_stack(&top));
+    }
+
+
+    return 0;
+}
