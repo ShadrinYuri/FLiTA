@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 
-typedef struct stack {
+typedef struct stack
+{
     int val;
     struct stack *next;
 } stack_node;
@@ -39,9 +40,10 @@ void print_stack(stack_node *top)
 }
 
 
-int main() {
-    int n;
-    printf("write number of stack ");
+int main()
+{
+	int n;
+    printf("Write the initial stack size ");
     scanf("%d", &n);
 
     stack_node *top = NULL;
@@ -52,13 +54,34 @@ int main() {
         scanf("%d", &val);
         push_stack(&top, val);
     }
-    printf("print of stack\n");
-    print_stack(top);
-    while (top != NULL)
+
+    for(;;)
     {
-        printf("func pop: %d\n", pop_stack(&top));
+        printf("\nMenu:\n");
+		printf("1.Push stack\n");
+		printf("2.Pop stack\n");
+		printf("3.Print stack\n");
+		printf("4.Exit\n");
+		int a;
+		scanf("%d",&a);
+		switch(a)
+		{
+			case 1:
+				printf("Write a new value for the stack\n");
+				int val;
+				scanf("%d", &val);
+				push_stack(&top, val);
+				break;
+			case 2:
+				printf("Pop stack: %d\n", pop_stack(&top));
+				break;
+			case 3:
+				printf("stack: %d\n");
+				print_stack(top);
+				break;
+		}
+		if (a == 4)
+			break;
     }
-
-
     return 0;
 }
