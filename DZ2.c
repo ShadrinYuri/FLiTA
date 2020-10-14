@@ -43,27 +43,25 @@ int main(void)
     printf("Enter connection\n");
     char *str = (char*) malloc(100 * sizeof(char));
     scanf("%s", str);
-    int k = 0;
-    char *first_name = (char*) malloc(20 * sizeof(char));
-
-    strcpy(first_name, strtok(str, "-"));
+    char *first_name;
+    first_name = strtok(str, "-");
     while(first_name != NULL)
     {
 
         int index_first_name = -1;
-        char *second_name = (char*) malloc(20 * sizeof(char));
+        char *second_name;
         int index_second_name = -1;
 
         //if (k != 0)
             //strcpy(first_name, strtok(NULL, "-"));
         //else
             //strcpy(first_name, strtok(str, "-"));
-        strcpy(second_name, strtok(NULL, ";"));
+        second_name = strtok(NULL, ";");
         // if (first_name == NULL)
         //     break;
         printf("%s\n", first_name);
         printf("%s\n", second_name);
-
+        
         //k += strlen(first_name) + strlen(first_name) + 2;
         //printf("%d\n", k);
         for( int i = 0; i < n; i++)
@@ -89,12 +87,11 @@ int main(void)
             }
         }
         printf("sdsds\n");
-        free(first_name);
-        free(second_name);
-        char *first_name = (char*) malloc(20 * sizeof(char));
-        strcpy(first_name, strtok(NULL, "-"));
+        //free(first_name);
+        //free(second_name);
+        //first_name = (char*) malloc(20 * sizeof(char));
+        first_name = strtok(NULL, "-");
         printf("%s\n", first_name);
-        printf("sdsdsand\n");
     }
     printf("and\n");
 //
@@ -167,7 +164,7 @@ int main(void)
 
     strcat(arr, "}");
 
-    FILE* f = fopen("graph.dot", "w");
+    FILE* f = fopen("/Users/aliagumirova/Desktop/Yuri/graph.dot", "w");
     fprintf(f, "%s\n", arr);
     fclose(f);
 
