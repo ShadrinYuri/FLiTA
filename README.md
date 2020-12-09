@@ -40,3 +40,5 @@
         }
     }
 ```
+## Структурная схема алгоритма:
+![Alt-текст](https://github.com/igorkorobenko/FLITA_4dz/blob/main/str_scheme.png "структурная схема")
