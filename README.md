@@ -41,7 +41,7 @@
     }
 ```
 ## Структурная схема алгоритма:
-![Alt-текст](https://github.com/igorkorobenko/FLITA_4dz/blob/main/str_scheme.png "структурная схема")
+![Alt-текст](https://github.com/ShadrinYuri/FLiTA/blob/master/diagram.png "структурная схема")
 
 ## Результат работы:
 ![Alt-текст](https://github.com/ShadrinYuri/FLiTA/blob/master/result.png "результат работы")
