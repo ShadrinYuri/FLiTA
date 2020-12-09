@@ -45,3 +45,6 @@
 
 ## Результат работы:
 ![Alt-текст](https://github.com/ShadrinYuri/FLiTA/blob/master/result.png "результат работы")
+
+## Отображение графа:
+![Alt-текст](https://github.com/ShadrinYuri/FLiTA/blob/master/graph.png "отображение графа")
